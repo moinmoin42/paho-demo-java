@@ -1,0 +1,48 @@
+apply plugin: 'java'
+
+// this plugin makes the output runnable as a standalone application.
+// without it it would only produce something that can act as a library
+// for others to load
+apply plugin: 'application'
+// this tells you what class acts as the entry point of the application,
+// it must have a `main` function in it.
+mainClassName = 'MqttDemo'
+
+
+// this shows where to get dependencies from
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	// `compile` is deprecated and won't work in Gradle 7, so we use the
+	// `implementation` command, documented here
+	// https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.1'
+ }
+
+
+
+
+/////////////////////////////////////////////////////////////////
+// the stuff below works, but is unused
+/*
+
+
+// this block is optional, but if you have it, it overrides the name
+// of the output file. This yields `build/libs/MqttDemo-0.1.0.jar`
+jar {
+    archiveBaseName = 'MqttDemo'
+    archiveVersion =  '0.1.0'
+}
+
+
+
+// this just copies everything from src/ to dest/
+task copy(type: Copy, description: "Tinkering with Gradle") {
+    from "src"
+    into "dest"
+}
+
+*/

@@ -4,7 +4,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-public class MqttPublishSample {
+public class MqttDemo {
 
 	public static void main(String[] args) {
 
