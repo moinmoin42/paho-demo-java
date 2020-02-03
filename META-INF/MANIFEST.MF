@@ -1,0 +1,2 @@
+Main-Class: MqttPublishSample
+Class-Path: org.eclipse.paho.client.mqttv3-1.2.1.jar
