@@ -5,7 +5,7 @@
 Main-Class: MqttPublishSample
 Class-Path: org.eclipse.paho.client.mqttv3-1.2.1.jar
 ```
-- `javac MqttPublishSample.java` -> this produces `MqttPublishSample.class` in the same directory
-- `jar cmvf META-INF/MANIFEST.MF out.jar org.eclipse.paho.client.mqttv3-1.2.1.jar MqttPublishSample.class`  -> this will build one Jar with everything in it
+- `javac -cp .:org.eclipse.paho.client.mqttv3-1.2.1.jar MqttPublishSample.java` -> this produces `MqttPublishSample.class` in the same directory
+- `jar cmvf META-INF/MANIFEST.MF out.jar  MqttPublishSample.class`  -> this will build one Jar with everything in it
 - run `java -jar out.jar` to execute the resulting file
 
